@@ -1,7 +1,8 @@
 import NextLink from 'next/link'
 import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
+import { Box, Text, LinkBox, LinkOverlay, Button } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
@@ -20,7 +21,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
+export const WorkGridItem = ({ children, id, title, thumbnail, githubLink }) => (
   <Box w="100%" textAlign="center">
     <LinkBox
       as={NextLink}
@@ -40,6 +41,17 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
       </LinkOverlay>
       <Text fontSize={14}>{children}</Text>
     </LinkBox>
+    <Button
+      as={NextLink}
+      href={githubLink}
+      target="_blank"
+      scroll={false}
+      rightIcon={<ChevronRightIcon />}
+      colorScheme="orange"
+      my={4}
+    >
+      GitHub Repository
+    </Button>
   </Box>
 )
 

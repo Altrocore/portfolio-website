@@ -83,15 +83,15 @@ const Home = () => {
                 way to solving real-life problems with code. 
                 </Paragraph>
                 <Box align="center" my={4}>
-                <Button
-                    as={NextLink}
-                    href="/works"
-                    scroll={false}
-                    rightIcon={<ChevronRightIcon />}
-                    colorScheme="orange"
-                >
-                    My portfolio
-                </Button>
+                    <Button
+                        as={NextLink}
+                        href="/works"
+                        scroll={false}
+                        rightIcon={<ChevronRightIcon />}
+                        colorScheme="orange"
+                    >
+                        My portfolio
+                    </Button>
                 </Box>
             </Section>
 
